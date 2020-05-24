@@ -1,12 +1,12 @@
 # Controllers, resources and routing for building application from scratch.
 
-## Requirements
+## Dependencies
 
-* laravel-ui
-* it-aces/laravel-doctrine
-* it-aces/laravel-doctrine-acl
+ * [laravel/ui](https://github.com/laravel/ui)
+ * [it-aces/laravel-doctrine](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine/src/master/)
+ * [it-aces/laravel-doctrine-acl](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine-acl/src/master/)
 
-## Installation
+## Install
 
 * Add composer repositories
 
@@ -37,10 +37,10 @@ composer require it-aces/laravel-doctrine-web
 npm install cross-env css-loader jquery popper.js bootstrap
 ```
 
-* Publising
+* Publising _This command will owerride resources/js/app.js and resources/sass/app.scss_
 
 ```BASH
-php artisan vendor:publish --provider="ItAces\Web\PackageServiceProvider"
+php artisan vendor:publish --provider="ItAces\Web\PackageServiceProvider" --force
 ```
 
 * Compiling
@@ -48,4 +48,8 @@ php artisan vendor:publish --provider="ItAces\Web\PackageServiceProvider"
 ```BASH
 npm run dev
 ```
+
+## Next
+
+To have a powerful Admin Panel, install the [it-aces/laravel-doctrine-admin](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine-admin/src/master/) package.
 
