@@ -34,8 +34,7 @@ composer require it-aces/laravel-doctrine-web
 ```
 
 ```BASH
-npm install cross-env
-npm install bootstrap
+npm install cross-env css-loader jquery popper.js bootstrap
 ```
 
 * Publising
