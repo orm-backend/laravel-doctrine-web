@@ -18,7 +18,6 @@ Auth::routes(['verify' => true]);
 
 Route::group(array(
     'prefix' => 'home',
-    'namespace' => 'Home',
     'middleware' => ['auth', 'verified']
 ), function () {
     Route::get('/', 'HomeController@index')->name('home.index');
