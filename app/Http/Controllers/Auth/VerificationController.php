@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\VerifiesEmails;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class VerificationController extends Controller
 {
@@ -35,16 +35,11 @@ class VerificationController extends Controller
     
     protected function redirectTo()
     {
-        $redirectTo = '/';
-        $user = Auth::user();
-        
-        if ($user->isSeller() || $user->isAdmin()) {
-            $redirectTo = route('admin.index');
-        } else if ($user->isBuyer()) {
-            $redirectTo = route('home.index');
+        if (Gate::allows('dashboard')) {
+            return route('admin.index');
         }
         
-        return $redirectTo;
+        return route('home.index');
     }
  
 }
