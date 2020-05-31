@@ -49,6 +49,20 @@ php artisan vendor:publish --provider="ItAces\Web\PackageServiceProvider" --forc
 npm run dev
 ```
 
+## Setting up
+
+* Adding menu listener in app/Providers/EventServiceProvider
+
+```PHP
+protected $listen = [
+        ***
+        
+    BeforMenu::class => [
+        BeforMenuListener::class,
+    ],
+];
+```
+
 ## Next
 
 To have a powerful Admin Panel, install the [it-aces/laravel-doctrine-admin](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine-admin/src/master/) package.
