@@ -305,7 +305,7 @@ class FieldContainer
 
         /**
          *
-         * @var \ItAces\Web\Fields\Types\FileType $targetEntity
+         * @var \ItAces\Types\FileType $targetEntity
          */
         $fileEntity = new $targetEntity;
         $fileEntity->setName($uploadedFile->getClientOriginalName());
