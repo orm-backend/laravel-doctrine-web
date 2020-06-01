@@ -140,8 +140,9 @@ abstract class MetaField
         $this->fullname .= '['. $this->name . ']';
         $this->title = __(Str::pluralCamelWords( ucfirst($this->name), 1));
         $this->autohide = $this->name != $classMetadata->getSingleIdentifierFieldName() && !$this->name != 'name' && !$this->name != 'code';
+        $internalFields = array_merge(FieldContainer::INTERNAL_FIELDS, [$classMetadata->getSingleIdentifierColumnName()]);
         
-        if (array_search($this->name, FieldContainer::INTERNAL_FIELDS) !== false) {
+        if (in_array($this->name, $internalFields)) {
             $this->disabled = true;
         }
     }
