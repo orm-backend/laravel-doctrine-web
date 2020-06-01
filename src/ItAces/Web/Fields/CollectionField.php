@@ -54,7 +54,7 @@ class CollectionField extends MetaField
         $instance = parent::getInstance($classMetadata, $fieldName, $entity, $index);
         
         $associationMapping = $classMetadata->getAssociationMapping($fieldName);
-        $instance->refClassUrlName = Helper::classToUlr($associationMapping['targetEntity']);
+        $instance->refClassUrlName = Helper::classToUrl($associationMapping['targetEntity']);
         $instance->targetEntity = $associationMapping['targetEntity'];
         $refClassShortName = (new \ReflectionClass($associationMapping['targetEntity']))->getShortName();
         $instance->refClassAlias = lcfirst($refClassShortName);

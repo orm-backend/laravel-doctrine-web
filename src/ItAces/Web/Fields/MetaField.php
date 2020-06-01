@@ -126,9 +126,9 @@ abstract class MetaField
     {
         $this->name = $fieldName;
         $this->class = $classMetadata->name;
-        $this->classUrlName = Helper::classToUlr($this->class);
+        $this->classUrlName = Helper::classToUrl($this->class);
         $this->aliasname = lcfirst((new \ReflectionClass($this->class))->getShortName()) .'.'. $this->name;
-        $this->fullname = Helper::classToUlr($this->class);
+        $this->fullname = Helper::classToUrl($this->class);
         
         /**
          * A form can contain several objects of the same class

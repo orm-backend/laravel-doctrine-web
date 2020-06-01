@@ -44,7 +44,7 @@ class ReferenceField extends MetaField
     {
         $instance = parent::getInstance($classMetadata, $fieldName, $entity, $index);
         $associationMapping = $classMetadata->getAssociationMapping($fieldName);
-        $instance->refClassUrlName = Helper::classToUlr($associationMapping['targetEntity']);
+        $instance->refClassUrlName = Helper::classToUrl($associationMapping['targetEntity']);
         $instance->refClassAlias = lcfirst((new \ReflectionClass($associationMapping['targetEntity']))->getShortName());
         
         if ($entity && array_search($fieldName, FieldContainer::FORBIDDEN_FIELDS) === false) {

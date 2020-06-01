@@ -213,7 +213,7 @@ class FieldContainer
          */
         $em = app('em');
         $classMetadata = $em->getClassMetadata($className);
-        $classUrlName = Helper::classToUlr($classMetadata->name);
+        $classUrlName = Helper::classToUrl($classMetadata->name);
         $entityFiles = request()->file($classUrlName);
         
         foreach ($classMetadata->associationMappings as $association) {
@@ -355,7 +355,7 @@ class FieldContainer
                 continue;
             }
             
-            if (!Gate::check('read', Helper::classToUlr($association['targetEntity']))) {
+            if (!Gate::check('read', Helper::classToUrl($association['targetEntity']))) {
                 continue;
             }
             
@@ -443,7 +443,7 @@ class FieldContainer
                 continue;
             }
             
-            if (!Gate::check('read', Helper::classToUlr($association['targetEntity']))) {
+            if (!Gate::check('read', Helper::classToUrl($association['targetEntity']))) {
                 continue;
             }
             
@@ -488,7 +488,7 @@ class FieldContainer
             } else if ($classMetadata->hasAssociation($fieldName)) {
                 $association = $classMetadata->getAssociationMapping($fieldName);
                 
-                if (Gate::check('read', Helper::classToUlr($association['targetEntity']))) {
+                if (Gate::check('read', Helper::classToUrl($association['targetEntity']))) {
                     $fields[] = ReferenceField::getInstance($classMetadata, $fieldName, $entity, $index);
                 }
             }

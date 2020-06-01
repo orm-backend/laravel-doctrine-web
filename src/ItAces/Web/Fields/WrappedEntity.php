@@ -71,7 +71,7 @@ class WrappedEntity
     public function __construct(EntityBase $entity)
     {
         $this->id = $entity->getId();
-        $this->classUrlName = Helper::classToUlr(get_class($entity));
+        $this->classUrlName = Helper::classToUrl(get_class($entity));
         
         if ($entity instanceof ImageType) {
             $this->type = 'image';
@@ -83,7 +83,7 @@ class WrappedEntity
             $this->type = 'common';
         }
         
-        $this->cretingAllowed = Gate::inspect('create', Helper::classToUlr(get_class($entity)))->allowed();
+        $this->cretingAllowed = Gate::inspect('create', Helper::classToUrl(get_class($entity)))->allowed();
         $this->readingAllowed = Gate::inspect('read-record', $entity)->allowed();
         $this->updatingAllowed = Gate::inspect('update-record', $entity)->allowed();
         $this->delitingAllowed = Gate::inspect('delete-record', $entity)->allowed();
