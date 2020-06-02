@@ -65,6 +65,10 @@ class ReferenceField extends MetaField
                 
                 if ($refClassMetadata->hasField('name')) {
                     $instance->valueName = Str::limit( $refClassMetadata->getFieldValue($reference, 'name'), 50 );
+                } else if ($refClassMetadata->hasField('email')) {
+                    $instance->valueName = $refClassMetadata->getFieldValue($reference, 'email');
+                } else if ($refClassMetadata->hasField('phone')) {
+                    $instance->valueName = $refClassMetadata->getFieldValue($reference, 'phone');
                 } else {
                     $instance->valueName = $instance->value;
                 }
