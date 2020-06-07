@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\ValidationException;
 use ItAces\Uploader;
 use ItAces\DBAL\Types\EnumType;
-use ItAces\ORM\Entities\EntityBase;
+use ItAces\ORM\Entities\Entity;
 use ItAces\Types\FileType;
 use ItAces\Types\ImageType;
 use ItAces\Utility\Helper;
@@ -76,9 +76,9 @@ class FieldContainer
     /**
      * Adding the entity to the container
      *
-     * @param \ItAces\ORM\Entities\EntityBase $entity
+     * @param \ItAces\ORM\Entities\Entity $entity
      */
-    public function addEntity(EntityBase $entity)
+    public function addEntity(Entity $entity)
     {
         $className = get_class($entity);
         $classMetadata = $this->em->getClassMetadata($className);
@@ -88,7 +88,7 @@ class FieldContainer
     /**
      * Adding an entity array to the container
      *
-     * @param \ItAces\ORM\Entities\EntityBase[] $data
+     * @param \ItAces\ORM\Entities\Entity[] $data
      */
     public function addCollection(array $data)
     {
@@ -281,9 +281,9 @@ class FieldContainer
      * @param string $inputName
      * @param string $type
      * @throws \Illuminate\Validation\ValidationException
-     * @return \ItAces\ORM\Entities\EntityBase
+     * @return \ItAces\ORM\Entities\Entity
      */
-    protected static function storeFile(UploadedFile $uploadedFile, string $targetEntity, string $inputName, string $type) : EntityBase
+    protected static function storeFile(UploadedFile $uploadedFile, string $targetEntity, string $inputName, string $type) : Entity
     {
         if ($uploadedFile->getError() === UPLOAD_ERR_INI_SIZE) { // Fix Laravel Validation
             throw ValidationException::withMessages([
@@ -317,11 +317,11 @@ class FieldContainer
     /**
      *
      * @param ClassMetadata $classMetadata
-     * @param EntityBase $instance
+     * @param Entity $instance
      * @param int $index
      * @return \ItAces\Web\Fields\WrappedEntity
      */
-    protected function wrapEntity(ClassMetadata $classMetadata, EntityBase $entity, int $index = null) : WrappedEntity
+    protected function wrapEntity(ClassMetadata $classMetadata, Entity $entity, int $index = null) : WrappedEntity
     {
         $fields = [BaseField::getInstance($classMetadata, $classMetadata->getSingleIdentifierFieldName(), $entity, $index)];
         $fields = array_merge($fields, $this->buildMetadataOfSimpleFields($classMetadata, $entity, $index));
@@ -341,11 +341,11 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\EntityBase $instance
+     * @param \ItAces\ORM\Entities\Entity $instance
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField[]
      */
-    protected function buildMetadataOfFileFields(ClassMetadata $classMetadata, EntityBase $entity = null, int $index = null)
+    protected function buildMetadataOfFileFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
         $fields = [];
         
@@ -396,11 +396,11 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\EntityBase $instance
+     * @param \ItAces\ORM\Entities\Entity $instance
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField[]
      */
-    protected function buildMetadataOfSimpleFields(ClassMetadata $classMetadata, EntityBase $entity = null, int $index = null)
+    protected function buildMetadataOfSimpleFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
         $fields = [];
         $internalFields = array_merge(self::INTERNAL_FIELDS, [$classMetadata->getSingleIdentifierColumnName()]);
@@ -428,11 +428,11 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\EntityBase $instance
+     * @param \ItAces\ORM\Entities\Entity $instance
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField[]
      */
-    protected function buildMetadataOfAssociationFields(ClassMetadata $classMetadata, EntityBase $entity = null, int $index = null)
+    protected function buildMetadataOfAssociationFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
         $fields = [];
         $internalFields = array_merge(self::INTERNAL_FIELDS, [$classMetadata->getSingleIdentifierColumnName()]);
@@ -474,11 +474,11 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\EntityBase $instance
+     * @param \ItAces\ORM\Entities\Entity $instance
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField[]
      */
-    protected function buildMetadataOfInternalFields(ClassMetadata $classMetadata, EntityBase $entity = null, int $index = null)
+    protected function buildMetadataOfInternalFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
         $fields = [];
 

@@ -2,7 +2,7 @@
 namespace ItAces\Web\Fields;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use ItAces\ORM\Entities\EntityBase;
+use ItAces\ORM\Entities\Entity;
 use ItAces\Utility\Helper;
 use ItAces\Utility\Str;
 
@@ -95,11 +95,11 @@ abstract class MetaField
      * 
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
      * @param string $fieldName
-     * @param \ItAces\ORM\Entities\EntityBase $entity
+     * @param \ItAces\ORM\Entities\Entity $entity
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField
      */
-    public static function getInstance(ClassMetadata $classMetadata, string $fieldName, EntityBase $entity = null, int $index = null)
+    public static function getInstance(ClassMetadata $classMetadata, string $fieldName, Entity $entity = null, int $index = null)
     {
         $instance = new static($classMetadata, $fieldName, $index);
         $instance->type = $instance->getHtmlType();

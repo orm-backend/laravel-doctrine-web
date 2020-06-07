@@ -3,7 +3,7 @@ namespace ItAces\Web\Fields;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
-use ItAces\ORM\Entities\EntityBase;
+use ItAces\ORM\Entities\Entity;
 use ItAces\Types\FileType;
 use ItAces\Types\ImageType;
 use ItAces\Utility\Helper;
@@ -68,7 +68,7 @@ class WrappedEntity
      * 
      * @param int $id
      */
-    public function __construct(EntityBase $entity)
+    public function __construct(Entity $entity)
     {
         $this->id = $entity->getId();
         $this->classUrlName = Helper::classToUrl(get_class($entity));

@@ -1,7 +1,7 @@
 <?php
 namespace ItAces\Web\Fields;
 
-use ItAces\ORM\Entities\EntityBase;
+use ItAces\ORM\Entities\Entity;
 use ItAces\ORM\DevelopmentException;
 use ItAces\Utility\Helper;
 
@@ -18,7 +18,7 @@ class EntityContainer extends FieldContainer
      * {@inheritDoc}
      * @see \ItAces\Web\Fields\FieldContainer::addEntity()
      */
-    public function addEntity(EntityBase $entity)
+    public function addEntity(Entity $entity)
     {
         throw new DevelopmentException('Method unsupported. Use the addCollection method or the FieldContainer class instead.');
     }

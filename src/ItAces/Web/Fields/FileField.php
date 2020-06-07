@@ -3,7 +3,7 @@ namespace ItAces\Web\Fields;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Illuminate\Support\Facades\Storage;
-use ItAces\ORM\Entities\EntityBase;
+use ItAces\ORM\Entities\Entity;
 
 /**
  * 
@@ -29,11 +29,11 @@ class FileField extends ReferenceField
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
      * @param string $fieldName
-     * @param \ItAces\ORM\Entities\EntityBase $entity
+     * @param \ItAces\ORM\Entities\Entity $entity
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField
      */
-    public static function getInstance(ClassMetadata $classMetadata, string $fieldName, EntityBase $entity = null, int $index = null)
+    public static function getInstance(ClassMetadata $classMetadata, string $fieldName, Entity $entity = null, int $index = null)
     {
         $instance = parent::getInstance($classMetadata, $fieldName, $entity, $index);
 

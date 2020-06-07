@@ -2,7 +2,7 @@
 namespace ItAces\Web\Fields;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use ItAces\ORM\Entities\EntityBase;
+use ItAces\ORM\Entities\Entity;
 use ItAces\Utility\Helper;
 use ItAces\Utility\Str;
 
@@ -36,11 +36,11 @@ class ReferenceField extends MetaField
      * 
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
      * @param string $fieldName
-     * @param \ItAces\ORM\Entities\EntityBase $entity
+     * @param \ItAces\ORM\Entities\Entity $entity
      * @param int $index
      * @return \ItAces\Web\Fields\MetaField
      */
-    public static function getInstance(ClassMetadata $classMetadata, string $fieldName, EntityBase $entity = null, int $index = null)
+    public static function getInstance(ClassMetadata $classMetadata, string $fieldName, Entity $entity = null, int $index = null)
     {
         $instance = parent::getInstance($classMetadata, $fieldName, $entity, $index);
         $associationMapping = $classMetadata->getAssociationMapping($fieldName);
@@ -50,7 +50,7 @@ class ReferenceField extends MetaField
         if ($entity && array_search($fieldName, FieldContainer::FORBIDDEN_FIELDS) === false) {
             /**
              * 
-             * @var \ItAces\ORM\Entities\EntityBase $reference
+             * @var \ItAces\ORM\Entities\Entity $reference
              */
             $reference = $classMetadata->getFieldValue($entity, $fieldName);
             
