@@ -1,5 +1,5 @@
 <?php
-namespace ItAces\Web\Menu;
+namespace VVK\Web\Menu;
 
 
 /**
@@ -15,7 +15,7 @@ class Menu
     protected $link;
     
     /**
-     * @var \ItAces\Web\Menu\Menu[]
+     * @var \VVK\Web\Menu\Menu[]
      */
     protected $submenu;
     
@@ -99,7 +99,7 @@ class Menu
     /**
      * 
      * @param string $key
-     * @param \ItAces\Web\Menu\Menu $submenu
+     * @param \VVK\Web\Menu\Menu $submenu
      */
     public function addSubmenuElement(string $key, Menu $submenu) : void
     {
@@ -109,7 +109,7 @@ class Menu
     /**
      * 
      * @param string $key
-     * @return NULL|\ItAces\Web\Menu\Menu
+     * @return NULL|\VVK\Web\Menu\Menu
      */
     public function getSubmenuElement(string $key)
     {

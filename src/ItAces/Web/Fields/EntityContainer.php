@@ -1,9 +1,9 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
-use ItAces\ORM\Entities\Entity;
-use ItAces\ORM\DevelopmentException;
-use ItAces\Utility\Helper;
+use VVK\ORM\Entities\Entity;
+use VVK\ORM\DevelopmentException;
+use VVK\Utility\Helper;
 
 /**
  *
@@ -16,7 +16,7 @@ class EntityContainer extends FieldContainer
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\FieldContainer::addEntity()
+     * @see \VVK\Web\Fields\FieldContainer::addEntity()
      */
     public function addEntity(Entity $entity)
     {
@@ -26,7 +26,7 @@ class EntityContainer extends FieldContainer
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\FieldContainer::addCollection()
+     * @see \VVK\Web\Fields\FieldContainer::addCollection()
      */
     public function addCollection(array $data)
     {
@@ -40,7 +40,7 @@ class EntityContainer extends FieldContainer
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\FieldContainer::readRequest()
+     * @see \VVK\Web\Fields\FieldContainer::readRequest()
      */
     public static function readRequest(array $request, array &$storedFiles = null) : array
     {

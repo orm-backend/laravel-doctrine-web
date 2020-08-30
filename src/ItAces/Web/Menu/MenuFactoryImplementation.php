@@ -1,18 +1,18 @@
 <?php
-namespace ItAces\Web\Menu;
+namespace VVK\Web\Menu;
 
 class MenuFactoryImplementation implements MenuFactory
 {
     
     /**
      * 
-     * @var \ItAces\Web\Menu\Menu[]
+     * @var \VVK\Web\Menu\Menu[]
      */
     protected $elements = [];
     
     /**
      * {@inheritDoc}
-     * @see \ItAces\Web\Menu\MenuFactory::addMenu()
+     * @see \VVK\Web\Menu\MenuFactory::addMenu()
      */
     public function addMenu(string $key, Menu $menu) : void
     {
@@ -22,7 +22,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Menu\MenuFactory::isContains()
+     * @see \VVK\Web\Menu\MenuFactory::isContains()
      */
     public function isContains(string $key) : bool
     {
@@ -32,7 +32,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Menu\MenuFactory::removeMenu()
+     * @see \VVK\Web\Menu\MenuFactory::removeMenu()
      */
     public function removeMenu(string $key) : void
     {
@@ -42,7 +42,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Menu\MenuFactory::getMenu()
+     * @see \VVK\Web\Menu\MenuFactory::getMenu()
      */
     public function getMenu(string $key)
     {
@@ -52,7 +52,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      *
      * {@inheritDoc}
-     * @see \ItAces\Web\Menu\MenuFactory::getMenuValue()
+     * @see \VVK\Web\Menu\MenuFactory::getMenuValue()
      */
     public function getMenuValue(string $key)
     {

@@ -1,9 +1,9 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Illuminate\Support\Facades\Storage;
-use ItAces\ORM\Entities\Entity;
+use VVK\ORM\Entities\Entity;
 
 /**
  * 
@@ -29,9 +29,9 @@ class FileField extends ReferenceField
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
      * @param string $fieldName
-     * @param \ItAces\ORM\Entities\Entity $entity
+     * @param \VVK\ORM\Entities\Entity $entity
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField
+     * @return \VVK\Web\Fields\MetaField
      */
     public static function getInstance(ClassMetadata $classMetadata, string $fieldName, Entity $entity = null, int $index = null)
     {
@@ -40,7 +40,7 @@ class FileField extends ReferenceField
         if ($entity && array_search($fieldName, FieldContainer::FORBIDDEN_FIELDS) === false) {
             /**
              * 
-             * @var \ItAces\Types\FileType $file
+             * @var \VVK\Types\FileType $file
              */
             $file = $entity->{$fieldName};
 
@@ -56,7 +56,7 @@ class FileField extends ReferenceField
     /**
      *
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\MetaField::getHtmlType()
+     * @see \VVK\Web\Fields\MetaField::getHtmlType()
      */
     protected function getHtmlType()
     {
@@ -66,7 +66,7 @@ class FileField extends ReferenceField
     /**
      *
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\MetaField::getDefaultSortable()
+     * @see \VVK\Web\Fields\MetaField::getDefaultSortable()
      */
     protected function getDefaultSortable()
     {

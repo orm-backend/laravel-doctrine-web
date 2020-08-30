@@ -1,14 +1,14 @@
 <?php
-namespace ItAces\Web;
+namespace VVK\Web;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Routing\Router;
 use Illuminate\Contracts\Container\Container;
-use ItAces\Web\Components\MenuComponent;
-use ItAces\Web\Menu\MenuFactory;
-use ItAces\Web\Menu\MenuFactoryImplementation;
-use ItAces\Web\Menu\MenuMiddleware;
+use VVK\Web\Components\MenuComponent;
+use VVK\Web\Menu\MenuFactory;
+use VVK\Web\Menu\MenuFactoryImplementation;
+use VVK\Web\Menu\MenuMiddleware;
 
 class PackageServiceProvider extends ServiceProvider
 {

@@ -3,8 +3,8 @@
 ## Dependencies
 
  * [laravel/ui](https://github.com/laravel/ui)
- * [it-aces/laravel-doctrine](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine/src/master/)
- * [it-aces/laravel-doctrine-acl](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine-acl/src/master/)
+ * [vvk/laravel-doctrine](https://github.com/vvk-kolsky/laravel-doctrine)
+ * [vvk/laravel-doctrine-acl](https://github.com/vvk-kolsky/laravel-doctrine-acl)
 
 ## Install
 
@@ -14,15 +14,15 @@
 "repositories": [
 	{
        "type": "vcs",
-       "url": "git@bitbucket.org:vitaliy_kovalenko/laravel-doctrine.git"
+       "url": "git@github.com:vvk-kolsky/laravel-doctrine.git"
     },
     {
        "type": "vcs",
-       "url": "git@bitbucket.org:vitaliy_kovalenko/laravel-doctrine-acl.git"
+       "url": "git@github.com:vvk-kolsky/laravel-doctrine-acl.git"
     },
     {
        "type": "vcs",
-       "url": "git@bitbucket.org:vitaliy_kovalenko/laravel-doctrine-web.git"
+       "url": "git@github.com:vvk-kolsky/laravel-doctrine-web.git"
     }
 ]
 ```
@@ -30,7 +30,7 @@
 * Install packages
 
 ```BASH
-composer require it-aces/laravel-doctrine-web
+composer require vvk/laravel-doctrine-web
 ```
 
 ```BASH
@@ -40,7 +40,7 @@ npm install cross-env css-loader jquery popper.js bootstrap
 * Publising _This command will owerride resources/js/app.js and resources/sass/app.scss_
 
 ```BASH
-php artisan vendor:publish --provider="ItAces\Web\PackageServiceProvider" --force
+php artisan vendor:publish --provider="VVK\Web\PackageServiceProvider" --force
 ```
 
 * Compiling
@@ -65,5 +65,5 @@ protected $listen = [
 
 ## Next
 
-To have a powerful Admin Panel, install the [it-aces/laravel-doctrine-admin](https://bitbucket.org/vitaliy_kovalenko/laravel-doctrine-admin/src/master/) package.
+To have a powerful Admin Panel, install the [vvk/laravel-doctrine-admin](https://github.com/vvk-kolsky/laravel-doctrine-admin) package.
 

@@ -1,5 +1,5 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
@@ -7,12 +7,12 @@ use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\ValidationException;
-use ItAces\Uploader;
-use ItAces\DBAL\Types\EnumType;
-use ItAces\ORM\Entities\Entity;
-use ItAces\Types\FileType;
-use ItAces\Types\ImageType;
-use ItAces\Utility\Helper;
+use VVK\Uploader;
+use VVK\DBAL\Types\EnumType;
+use VVK\ORM\Entities\Entity;
+use VVK\Types\FileType;
+use VVK\Types\ImageType;
+use VVK\Utility\Helper;
 
 /**
  * 
@@ -27,13 +27,13 @@ class FieldContainer
     
     /**
      * 
-     * @var \ItAces\Web\Fields\MetaField[]
+     * @var \VVK\Web\Fields\MetaField[]
      */
     protected $fields = [];
     
     /**
      *
-     * @var \ItAces\Web\Fields\WrappedEntity[]
+     * @var \VVK\Web\Fields\WrappedEntity[]
      */
     protected $entities = [];
     
@@ -76,7 +76,7 @@ class FieldContainer
     /**
      * Adding the entity to the container
      *
-     * @param \ItAces\ORM\Entities\Entity $entity
+     * @param \VVK\ORM\Entities\Entity $entity
      */
     public function addEntity(Entity $entity)
     {
@@ -88,7 +88,7 @@ class FieldContainer
     /**
      * Adding an entity array to the container
      *
-     * @param \ItAces\ORM\Entities\Entity[] $data
+     * @param \VVK\ORM\Entities\Entity[] $data
      */
     public function addCollection(array $data)
     {
@@ -141,7 +141,7 @@ class FieldContainer
     
     /**
      *
-     * @return \ItAces\Web\Fields\WrappedEntity[]
+     * @return \VVK\Web\Fields\WrappedEntity[]
      */
     public function entities()
     {
@@ -151,7 +151,7 @@ class FieldContainer
     /**
      * Getting field meta information
      *
-     * @return \ItAces\Web\Fields\MetaField[]
+     * @return \VVK\Web\Fields\MetaField[]
      */
     public function fields()
     {
@@ -161,7 +161,7 @@ class FieldContainer
     /**
      * Getting the first entity from the container
      *
-     * @return \ItAces\Web\Fields\WrappedEntity|null
+     * @return \VVK\Web\Fields\WrappedEntity|null
      */
     public function first()
     {
@@ -281,7 +281,7 @@ class FieldContainer
      * @param string $inputName
      * @param string $type
      * @throws \Illuminate\Validation\ValidationException
-     * @return \ItAces\ORM\Entities\Entity
+     * @return \VVK\ORM\Entities\Entity
      */
     protected static function storeFile(UploadedFile $uploadedFile, string $targetEntity, string $inputName, string $type) : Entity
     {
@@ -305,7 +305,7 @@ class FieldContainer
 
         /**
          *
-         * @var \ItAces\Types\FileType $targetEntity
+         * @var \VVK\Types\FileType $targetEntity
          */
         $fileEntity = new $targetEntity;
         $fileEntity->setName($uploadedFile->getClientOriginalName());
@@ -319,7 +319,7 @@ class FieldContainer
      * @param ClassMetadata $classMetadata
      * @param Entity $instance
      * @param int $index
-     * @return \ItAces\Web\Fields\WrappedEntity
+     * @return \VVK\Web\Fields\WrappedEntity
      */
     protected function wrapEntity(ClassMetadata $classMetadata, Entity $entity, int $index = null) : WrappedEntity
     {
@@ -341,9 +341,9 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\Entity $instance
+     * @param \VVK\ORM\Entities\Entity $instance
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField[]
+     * @return \VVK\Web\Fields\MetaField[]
      */
     protected function buildMetadataOfFileFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
@@ -396,9 +396,9 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\Entity $instance
+     * @param \VVK\ORM\Entities\Entity $instance
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField[]
+     * @return \VVK\Web\Fields\MetaField[]
      */
     protected function buildMetadataOfSimpleFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
@@ -428,9 +428,9 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\Entity $instance
+     * @param \VVK\ORM\Entities\Entity $instance
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField[]
+     * @return \VVK\Web\Fields\MetaField[]
      */
     protected function buildMetadataOfAssociationFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {
@@ -474,9 +474,9 @@ class FieldContainer
     /**
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
-     * @param \ItAces\ORM\Entities\Entity $instance
+     * @param \VVK\ORM\Entities\Entity $instance
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField[]
+     * @return \VVK\Web\Fields\MetaField[]
      */
     protected function buildMetadataOfInternalFields(ClassMetadata $classMetadata, Entity $entity = null, int $index = null)
     {

@@ -1,10 +1,10 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use ItAces\ORM\Entities\Entity;
-use ItAces\Utility\Helper;
-use ItAces\Utility\Str;
+use VVK\ORM\Entities\Entity;
+use VVK\Utility\Helper;
+use VVK\Utility\Str;
 
 /**
  * 
@@ -36,9 +36,9 @@ class ReferenceField extends MetaField
      * 
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
      * @param string $fieldName
-     * @param \ItAces\ORM\Entities\Entity $entity
+     * @param \VVK\ORM\Entities\Entity $entity
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField
+     * @return \VVK\Web\Fields\MetaField
      */
     public static function getInstance(ClassMetadata $classMetadata, string $fieldName, Entity $entity = null, int $index = null)
     {
@@ -50,7 +50,7 @@ class ReferenceField extends MetaField
         if ($entity && array_search($fieldName, FieldContainer::FORBIDDEN_FIELDS) === false) {
             /**
              * 
-             * @var \ItAces\ORM\Entities\Entity $reference
+             * @var \VVK\ORM\Entities\Entity $reference
              */
             $reference = $classMetadata->getFieldValue($entity, $fieldName);
             
@@ -81,7 +81,7 @@ class ReferenceField extends MetaField
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\MetaField::getHtmlType()
+     * @see \VVK\Web\Fields\MetaField::getHtmlType()
      */
     protected function getHtmlType()
     {
@@ -91,7 +91,7 @@ class ReferenceField extends MetaField
     /**
      * 
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\MetaField::getDefaultSortable()
+     * @see \VVK\Web\Fields\MetaField::getDefaultSortable()
      */
     protected function getDefaultSortable()
     {

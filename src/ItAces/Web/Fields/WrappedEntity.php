@@ -1,12 +1,12 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
-use ItAces\ORM\Entities\Entity;
-use ItAces\Types\FileType;
-use ItAces\Types\ImageType;
-use ItAces\Utility\Helper;
+use VVK\ORM\Entities\Entity;
+use VVK\Types\FileType;
+use VVK\Types\ImageType;
+use VVK\Utility\Helper;
 
 
 /**
@@ -24,7 +24,7 @@ class WrappedEntity
     
     /**
      * 
-     * @var \ItAces\Web\Fields\BaseField[]
+     * @var \VVK\Web\Fields\BaseField[]
      */
     protected $fields = [];
     
@@ -92,7 +92,7 @@ class WrappedEntity
     
     /**
      * 
-     * @param \ItAces\Web\Fields\MetaField $field
+     * @param \VVK\Web\Fields\MetaField $field
      */
     public function addField(MetaField $field)
     {
@@ -119,7 +119,7 @@ class WrappedEntity
     
     /**
      * 
-     * @return \ItAces\Web\Fields\BaseField[]
+     * @return \VVK\Web\Fields\BaseField[]
      */
     public function fields()
     {
@@ -128,7 +128,7 @@ class WrappedEntity
     
     /**
      *
-     * @return \ItAces\Web\Fields\BaseField
+     * @return \VVK\Web\Fields\BaseField
      */
     public function field(string $name)
     {

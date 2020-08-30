@@ -1,9 +1,9 @@
 {
-    "name": "it-aces/laravel-doctrine-web",
+    "name": "vvk/laravel-doctrine-web",
     "description": "Controllers, resources and routing for building application from scratch.",
     "type": "library",
     "license": "MIT",
-    "keywords": ["it-aces", "laravel-doctrine-web", "laravel", "doctrine"],
+    "keywords": ["vvk", "laravel-doctrine-web", "laravel", "doctrine"],
     "authors": [
         {
             "name": "Vitaliy Kovalenko",
@@ -12,19 +12,19 @@
     ],
     "require": {
     	"laravel/ui": "^2.0",
-    	"it-aces/laravel-doctrine": "dev-master"
+    	"vvk/laravel-doctrine": "dev-master"
     },
     "require-dev": {
     },
     "autoload": {
         "psr-4": {
-        	"ItAces\\Web\\": "src/ItAces/Web/"
+        	"VVK\\Web\\": "src/VVK/Web/"
         }
     },
     "extra": {
 	    "laravel": {
 	        "providers": [
-	            "ItAces\\Web\\PackageServiceProvider"
+	            "VVK\\Web\\PackageServiceProvider"
 	        ]
 	    }
 	}

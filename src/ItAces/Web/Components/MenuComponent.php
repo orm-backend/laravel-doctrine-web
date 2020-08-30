@@ -1,5 +1,5 @@
 <?php
-namespace ItAces\Web\Components;
+namespace VVK\Web\Components;
 
 use Illuminate\View\Component;
 
@@ -20,7 +20,7 @@ class MenuComponent extends Component
     
     /**
      * 
-     * @var \ItAces\Web\Menu\MenuFactory
+     * @var \VVK\Web\Menu\MenuFactory
      */
     protected $factory;
     

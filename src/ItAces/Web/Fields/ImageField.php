@@ -1,5 +1,5 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
 /**
  * 
@@ -12,7 +12,7 @@ class ImageField extends FileField
     /**
      *
      * {@inheritDoc}
-     * @see \ItAces\Web\Fields\MetaField::getHtmlType()
+     * @see \VVK\Web\Fields\MetaField::getHtmlType()
      */
     protected function getHtmlType()
     {

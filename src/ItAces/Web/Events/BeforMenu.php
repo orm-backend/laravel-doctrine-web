@@ -1,5 +1,5 @@
 <?php
-namespace ItAces\Web\Events;
+namespace VVK\Web\Events;
 
 class BeforMenu
 {

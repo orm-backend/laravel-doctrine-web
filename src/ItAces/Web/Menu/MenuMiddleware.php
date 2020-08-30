@@ -1,8 +1,8 @@
 <?php
-namespace ItAces\Web\Menu;
+namespace VVK\Web\Menu;
 
 use Closure;
-use ItAces\Web\Events\BeforMenu;
+use VVK\Web\Events\BeforMenu;
 
 class MenuMiddleware
 {

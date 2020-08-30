@@ -18,7 +18,7 @@ class ResetPasswordController extends Controller
     |
     */
 
-    use \ItAces\Traits\ResetsPasswords;
+    use \VVK\Traits\ResetsPasswords;
 
     /**
      * Create a new controller instance.

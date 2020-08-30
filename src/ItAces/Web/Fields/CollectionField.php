@@ -1,13 +1,13 @@
 <?php
-namespace ItAces\Web\Fields;
+namespace VVK\Web\Fields;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Illuminate\Support\Facades\Storage;
-use ItAces\ORM\Entities\Entity;
-use ItAces\Utility\Helper;
-use ItAces\Utility\Str;
-use ItAces\Types\FileType;
-use ItAces\Types\ImageType;
+use VVK\ORM\Entities\Entity;
+use VVK\Utility\Helper;
+use VVK\Utility\Str;
+use VVK\Types\FileType;
+use VVK\Types\ImageType;
 
 class CollectionField extends MetaField
 {
@@ -45,9 +45,9 @@ class CollectionField extends MetaField
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $classMetadata
      * @param string $fieldName
-     * @param \ItAces\ORM\Entities\Entity $entity
+     * @param \VVK\ORM\Entities\Entity $entity
      * @param int $index
-     * @return \ItAces\Web\Fields\MetaField
+     * @return \VVK\Web\Fields\MetaField
      */
     public static function getInstance(ClassMetadata $classMetadata, string $fieldName, Entity $entity = null, int $index = null)
     {
@@ -71,7 +71,7 @@ class CollectionField extends MetaField
         if ($entity && array_search($fieldName, FieldContainer::FORBIDDEN_FIELDS) === false) {
             /**
              *
-             * @var \ItAces\ORM\Entities\Entity[] $collection
+             * @var \VVK\ORM\Entities\Entity[] $collection
              */
             $collection = $classMetadata->getFieldValue($entity, $fieldName);
 
@@ -122,7 +122,7 @@ class CollectionField extends MetaField
         $em = app('em');
         /**
          *
-         * @var \ItAces\ORM\Entities\Entity[] $collection
+         * @var \VVK\ORM\Entities\Entity[] $collection
          */
         $collection = $em->getRepository($this->targetEntity)->findAll();
         $refClassMetadata = $em->getClassMetadata($this->targetEntity);
