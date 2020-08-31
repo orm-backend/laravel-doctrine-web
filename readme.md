@@ -3,8 +3,8 @@
 ## Dependencies
 
  * [laravel/ui](https://github.com/laravel/ui)
- * [orm-backend/laravel-doctrine](https://github.com/vvk-kolsky/laravel-doctrine)
- * [orm-backend/laravel-doctrine-acl](https://github.com/vvk-kolsky/laravel-doctrine-acl)
+ * [orm-backend/laravel-doctrine](https://github.com/orm-backend/laravel-doctrine)
+ * [orm-backend/laravel-doctrine-acl](https://github.com/orm-backend/laravel-doctrine-acl)
 
 ## Install
 
@@ -14,15 +14,15 @@
 "repositories": [
 	{
        "type": "vcs",
-       "url": "git@github.com:vvk-kolsky/laravel-doctrine.git"
+       "url": "git@github.com:orm-backend/laravel-doctrine.git"
     },
     {
        "type": "vcs",
-       "url": "git@github.com:vvk-kolsky/laravel-doctrine-acl.git"
+       "url": "git@github.com:orm-backend/laravel-doctrine-acl.git"
     },
     {
        "type": "vcs",
-       "url": "git@github.com:vvk-kolsky/laravel-doctrine-web.git"
+       "url": "git@github.com:orm-backend/laravel-doctrine-web.git"
     }
 ]
 ```
@@ -65,5 +65,5 @@ protected $listen = [
 
 ## Next
 
-To have a powerful Admin Panel, install the [orm-backend/laravel-doctrine-admin](https://github.com/vvk-kolsky/laravel-doctrine-admin) package.
+To have a powerful Admin Panel, install the [orm-backend/laravel-doctrine-admin](https://github.com/orm-backend/laravel-doctrine-admin) package.
 
