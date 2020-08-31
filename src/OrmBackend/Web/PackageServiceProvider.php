@@ -1,14 +1,14 @@
 <?php
-namespace VVK\Web;
+namespace OrmBackend\Web;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Routing\Router;
 use Illuminate\Contracts\Container\Container;
-use VVK\Web\Components\MenuComponent;
-use VVK\Web\Menu\MenuFactory;
-use VVK\Web\Menu\MenuFactoryImplementation;
-use VVK\Web\Menu\MenuMiddleware;
+use OrmBackend\Web\Components\MenuComponent;
+use OrmBackend\Web\Menu\MenuFactory;
+use OrmBackend\Web\Menu\MenuFactoryImplementation;
+use OrmBackend\Web\Menu\MenuMiddleware;
 
 class PackageServiceProvider extends ServiceProvider
 {

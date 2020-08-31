@@ -1,5 +1,5 @@
 <?php
-namespace VVK\Web\Events;
+namespace OrmBackend\Web\Events;
 
 class BeforMenu
 {

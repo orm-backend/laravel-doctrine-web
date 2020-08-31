@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
-use VVK\ORM\DevelopmentException;
+use OrmBackend\ORM\DevelopmentException;
 
 class RegisterController extends Controller
 {

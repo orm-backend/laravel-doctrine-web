@@ -1,5 +1,5 @@
 <?php
-namespace VVK\Web\Menu;
+namespace OrmBackend\Web\Menu;
 
 interface MenuFactory
 {
@@ -7,14 +7,14 @@ interface MenuFactory
     /**
      * 
      * @param string $key
-     * @param \VVK\Web\Menu\Menu $menu
+     * @param \OrmBackend\Web\Menu\Menu $menu
      */
     public function addMenu(string $key, Menu $menu) : void;
     
     /**
      * 
      * @param string $key
-     * @return \VVK\Web\Menu\Menu | null
+     * @return \OrmBackend\Web\Menu\Menu | null
      */
     public function getMenu(string $key);
     
@@ -28,7 +28,7 @@ interface MenuFactory
     /**
      * 
      * @param string $key
-     * @return \VVK\Web\Menu\Menu | null
+     * @return \OrmBackend\Web\Menu\Menu | null
      */
     public function removeMenu(string $key) : void;
     

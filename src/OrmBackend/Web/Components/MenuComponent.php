@@ -1,5 +1,5 @@
 <?php
-namespace VVK\Web\Components;
+namespace OrmBackend\Web\Components;
 
 use Illuminate\View\Component;
 
@@ -20,7 +20,7 @@ class MenuComponent extends Component
     
     /**
      * 
-     * @var \VVK\Web\Menu\MenuFactory
+     * @var \OrmBackend\Web\Menu\MenuFactory
      */
     protected $factory;
     

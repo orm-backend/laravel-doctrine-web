@@ -1,18 +1,18 @@
 <?php
-namespace VVK\Web\Menu;
+namespace OrmBackend\Web\Menu;
 
 class MenuFactoryImplementation implements MenuFactory
 {
     
     /**
      * 
-     * @var \VVK\Web\Menu\Menu[]
+     * @var \OrmBackend\Web\Menu\Menu[]
      */
     protected $elements = [];
     
     /**
      * {@inheritDoc}
-     * @see \VVK\Web\Menu\MenuFactory::addMenu()
+     * @see \OrmBackend\Web\Menu\MenuFactory::addMenu()
      */
     public function addMenu(string $key, Menu $menu) : void
     {
@@ -22,7 +22,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      * 
      * {@inheritDoc}
-     * @see \VVK\Web\Menu\MenuFactory::isContains()
+     * @see \OrmBackend\Web\Menu\MenuFactory::isContains()
      */
     public function isContains(string $key) : bool
     {
@@ -32,7 +32,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      * 
      * {@inheritDoc}
-     * @see \VVK\Web\Menu\MenuFactory::removeMenu()
+     * @see \OrmBackend\Web\Menu\MenuFactory::removeMenu()
      */
     public function removeMenu(string $key) : void
     {
@@ -42,7 +42,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      * 
      * {@inheritDoc}
-     * @see \VVK\Web\Menu\MenuFactory::getMenu()
+     * @see \OrmBackend\Web\Menu\MenuFactory::getMenu()
      */
     public function getMenu(string $key)
     {
@@ -52,7 +52,7 @@ class MenuFactoryImplementation implements MenuFactory
     /**
      *
      * {@inheritDoc}
-     * @see \VVK\Web\Menu\MenuFactory::getMenuValue()
+     * @see \OrmBackend\Web\Menu\MenuFactory::getMenuValue()
      */
     public function getMenuValue(string $key)
     {

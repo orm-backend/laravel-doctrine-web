@@ -1,8 +1,8 @@
 <?php
-namespace VVK\Web\Menu;
+namespace OrmBackend\Web\Menu;
 
 use Closure;
-use VVK\Web\Events\BeforMenu;
+use OrmBackend\Web\Events\BeforMenu;
 
 class MenuMiddleware
 {

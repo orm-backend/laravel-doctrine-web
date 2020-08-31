@@ -1,5 +1,5 @@
 <?php
-namespace VVK\Web\Menu;
+namespace OrmBackend\Web\Menu;
 
 
 /**
@@ -15,7 +15,7 @@ class Menu
     protected $link;
     
     /**
-     * @var \VVK\Web\Menu\Menu[]
+     * @var \OrmBackend\Web\Menu\Menu[]
      */
     protected $submenu;
     
@@ -99,7 +99,7 @@ class Menu
     /**
      * 
      * @param string $key
-     * @param \VVK\Web\Menu\Menu $submenu
+     * @param \OrmBackend\Web\Menu\Menu $submenu
      */
     public function addSubmenuElement(string $key, Menu $submenu) : void
     {
@@ -109,7 +109,7 @@ class Menu
     /**
      * 
      * @param string $key
-     * @return NULL|\VVK\Web\Menu\Menu
+     * @return NULL|\OrmBackend\Web\Menu\Menu
      */
     public function getSubmenuElement(string $key)
     {

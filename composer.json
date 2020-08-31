@@ -1,9 +1,9 @@
 {
-    "name": "vvk/laravel-doctrine-web",
+    "name": "orm-backend/laravel-doctrine-web",
     "description": "Controllers, resources and routing for building application from scratch.",
     "type": "library",
     "license": "MIT",
-    "keywords": ["vvk", "laravel-doctrine-web", "laravel", "doctrine"],
+    "keywords": ["orm-backend", "laravel-doctrine-web", "laravel", "doctrine"],
     "authors": [
         {
             "name": "Vitaliy Kovalenko",
@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-        	"VVK\\Web\\": "src/VVK/Web/"
+        	"OrmBackend\\Web\\": "src/OrmBackend/Web/"
         }
     },
     "extra": {
 	    "laravel": {
 	        "providers": [
-	            "VVK\\Web\\PackageServiceProvider"
+	            "OrmBackend\\Web\\PackageServiceProvider"
 	        ]
 	    }
 	}

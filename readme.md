@@ -3,8 +3,8 @@
 ## Dependencies
 
  * [laravel/ui](https://github.com/laravel/ui)
- * [vvk/laravel-doctrine](https://github.com/vvk-kolsky/laravel-doctrine)
- * [vvk/laravel-doctrine-acl](https://github.com/vvk-kolsky/laravel-doctrine-acl)
+ * [orm-backend/laravel-doctrine](https://github.com/vvk-kolsky/laravel-doctrine)
+ * [orm-backend/laravel-doctrine-acl](https://github.com/vvk-kolsky/laravel-doctrine-acl)
 
 ## Install
 
@@ -30,7 +30,7 @@
 * Install packages
 
 ```BASH
-composer require vvk/laravel-doctrine-web
+composer require orm-backend/laravel-doctrine-web
 ```
 
 ```BASH
@@ -40,7 +40,7 @@ npm install cross-env css-loader jquery popper.js bootstrap
 * Publising _This command will owerride resources/js/app.js and resources/sass/app.scss_
 
 ```BASH
-php artisan vendor:publish --provider="VVK\Web\PackageServiceProvider" --force
+php artisan vendor:publish --provider="OrmBackend\Web\PackageServiceProvider" --force
 ```
 
 * Compiling
@@ -65,5 +65,5 @@ protected $listen = [
 
 ## Next
 
-To have a powerful Admin Panel, install the [vvk/laravel-doctrine-admin](https://github.com/vvk-kolsky/laravel-doctrine-admin) package.
+To have a powerful Admin Panel, install the [orm-backend/laravel-doctrine-admin](https://github.com/vvk-kolsky/laravel-doctrine-admin) package.
 

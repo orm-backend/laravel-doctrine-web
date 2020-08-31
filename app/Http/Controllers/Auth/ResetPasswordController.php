@@ -18,7 +18,7 @@ class ResetPasswordController extends Controller
     |
     */
 
-    use \VVK\Traits\ResetsPasswords;
+    use \OrmBackend\Traits\ResetsPasswords;
 
     /**
      * Create a new controller instance.

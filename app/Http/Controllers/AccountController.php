@@ -6,7 +6,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
-use VVK\Rules\PasswordMatch;
+use OrmBackend\Rules\PasswordMatch;
 
 class AccountController extends Controller
 {
