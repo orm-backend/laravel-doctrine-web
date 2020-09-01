@@ -27,7 +27,7 @@ class PackageServiceProvider extends ServiceProvider
             __DIR__.'/../../../resources' => resource_path(),
             __DIR__.'/../../../app/Http/Controllers' => app_path('Http/Controllers'),
             __DIR__.'/../../../routes' => base_path('routes')
-        ], 'itaces-web');
+        ], 'ormbackend-web');
         
         Blade::component('menu', MenuComponent::class);
     }

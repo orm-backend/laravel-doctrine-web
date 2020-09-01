@@ -87,7 +87,7 @@ class RegisterController extends Controller
             ->select('role')
             ->from(Role::class, 'role')
             ->where($qb->expr()->eq('role.code', ':code'))
-            ->setParameter('code', config('itaces.roles.default', 'default'))
+            ->setParameter('code', config('ormbackend.roles.default', 'default'))
             ->getQuery();
         
         if ($this->em->getConfiguration()->isSecondLevelCacheEnabled()) {
