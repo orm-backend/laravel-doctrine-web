@@ -34,7 +34,8 @@ composer require orm-backend/laravel-doctrine-web
 ```
 
 ```BASH
-npm install cross-env css-loader jquery popper.js bootstrap
+npm install jquery popper.js bootstrap
+npm install css-loader@3 --save-dev
 ```
 
 * Publising _This command will owerride resources/js/app.js and resources/sass/app.scss_
