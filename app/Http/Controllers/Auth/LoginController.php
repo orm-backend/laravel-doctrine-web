@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Support\Facades\Gate;
 
 class LoginController extends Controller
@@ -21,6 +22,11 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    /**
+     * This trait has all the login throttling functionality.
+     */
+    use ThrottlesLogins;
+    
     /**
      * Create a new controller instance.
      *
